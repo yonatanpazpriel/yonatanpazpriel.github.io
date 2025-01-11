@@ -252,3 +252,30 @@ footer p {
 .description, nav a, .contact-link, footer p {
     font-weight: 300;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(26, 26, 95, 0.9);  /* Semi-transparent header */
+    backdrop-filter: blur(5px);
+}
+
+main {
+    padding-top: 60px;  /* Account for fixed header */
+}
