@@ -6,7 +6,7 @@ document.querySelectorAll('.nav-button').forEach(button => {
         
         // Get the element's position relative to the viewport
         const elementPosition = targetSection.offsetTop;
-        const offsetPosition = elementPosition - 100;
+        const offsetPosition = elementPosition - 10;
 
         window.scrollTo({
             top: offsetPosition,
