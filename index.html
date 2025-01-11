@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yonatan Paz-Priel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div class="gradient-container"></div>
+    
     <header>
-        <h1>Yonatan Paz-Priel</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -20,14 +23,21 @@
 
     <main>
         <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm Yonatan, an undergrad EE/CS student at UC Berkeley. </p>
-            <p>I'm growing carnivorous plants.</p>
+            <div class="content-wrapper">
+                <h1>Hello, I'm Yonatan!</h1>
+                <div class="description">
+                    I'm a sophomore studying electrical engineering and computer science at UC Berkeley.
+                    <br><br>
+                    I'm passionate about NLP and carnivorous plants!
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Yonatan Paz-Priel. All rights reserved.</p>
+        <p>&copy; 2024 Yonatan Paz-Priel</p>
     </footer>
+
+    <script src="gradient.js"></script>
 </body>
 </html>

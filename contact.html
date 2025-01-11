@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Yonatan Paz-Priel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div class="gradient-container"></div>
     <header>
-        <!-- Same header/nav as index.html -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: yonatanpazpriel@berkeley.edu</p>
-            <p><a href="https://www.linkedin.com/in/yonatanpazpriel" target="_blank" class="contact-link">LinkedIn</a></p>
-            <p><a href="https://github.com/yonatanpazpriel" class="contact-link">GitHub</a></p>
+            <h2 class="center-text">Get in touch with me!</h2>
+            <div class="contact-container">
+                <p>
+                    <a href="mailto:yonatanpazpriel@berkeley.edu" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/yonatanpazpriel" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/yonatanpazpriel" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </p>
+            </div>
         </section>
     </main>
 
     <footer>
         <!-- Same footer as index.html -->
     </footer>
+
+    <script src="gradient.js"></script>
 </body>
 </html>
