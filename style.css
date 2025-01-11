@@ -1,30 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 :root {
-    --dark-red: #8B0000;
-    --cream: #FFF5E6;
+    --dark-indigo: #1a1a5f;
+    --indigo: #2d2d8f;
+    --light-indigo: #3d3d9f;
+    --soft-white: #f0f0ff;
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
 }
 
 header {
-    background-color: var(--dark-red);
+    background-color: var(--dark-indigo);
     width: 100%;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 h1 {
-    margin: 0;
+    font-weight: 500;
     font-size: 4rem;
-    color: var(--cream);
+    color: var(--soft-white);
     margin-bottom: 2rem;
-    font-weight: 300;
     letter-spacing: 2px;
 }
 
@@ -34,23 +37,24 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--cream);
+    color: var(--soft-white);
     font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 nav a.active {
-    border-bottom: 3px solid var(--cream);
+    border-bottom: 2px solid var(--soft-white);
 }
 
 main {
@@ -63,9 +67,11 @@ section {
 }
 
 h2 {
-    font-size: 2.2rem;
-    color: var(--cream);
-    background: none;
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--soft-white);
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 ul {
@@ -73,8 +79,8 @@ ul {
 }
 
 footer {
-    background-color: var(--dark-red);
-    color: var(--cream);
+    background-color: var(--dark-indigo);
+    color: var(--gold);
     width: 100%;
     padding: 2rem;
     margin-top: auto;
@@ -88,13 +94,13 @@ footer {
 
 .contact-container {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 2rem;
     background: none;
 }
 
 .contact-container p {
     font-size: 1.4rem;
-    color: var(--cream);
+    color: var(--gold);
     margin: 1rem 0;
     background: none;
 }
@@ -102,22 +108,54 @@ footer {
 .contact-link {
     font-size: 1.6rem;
     text-decoration: none;
-    color: var(--cream);
-    font-weight: bold;
+    color: var(--dark-indigo);
+    font-weight: 300;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     margin: 10px 0;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: var(--soft-white);
+}
+
+/* Email link in Gmail red */
+a[href^="mailto"] {
+    color: #EA4335;  /* Gmail red */
+}
+
+a[href^="mailto"] i {
+    color: #EA4335;  /* Gmail red */
+}
+
+/* Keep LinkedIn brand color */
+a[href*="linkedin"] {
+    color: #0077b5;
+}
+
+a[href*="linkedin"] i {
+    color: #0077b5;
+}
+
+/* Keep GitHub brand color */
+a[href*="github"] {
+    color: #333;
+}
+
+a[href*="github"] i {
+    color: #333;
+}
+
+.contact-link:hover {
+    background-color: rgba(240, 240, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .contact-link i {
     font-size: 1.4rem;
-}
-
-.contact-link:hover {
-    transform: translateY(-2px);
-    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: var(--dark-indigo);
 }
 
 .gradient-container {
@@ -128,10 +166,11 @@ footer {
     height: 100%;
     z-index: -1;
     background: radial-gradient(
-        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        #400000,
-        #600000 40%,
-        #8B0000 100%
+        circle 300px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        #232368,
+        #201f60 30%,
+        #1d1d58 50%,
+        #1a1a5f 60%
     );
     transition: background 0.3s ease;
 }
@@ -144,14 +183,14 @@ main, header, footer {
 /* Welcome heading */
 #about h2 {
     font-size: 3rem;
-    color: var(--cream);
+    color: var(--gold);
     margin-bottom: 2rem;
 }
 
 /* Description text */
 #about p {
     font-size: 1.8rem;
-    color: var(--cream);
+    color: var(--gold);
     margin: 1rem 0;
     line-height: 1.6;
 }
@@ -160,6 +199,7 @@ main, header, footer {
 footer p {
     font-size: 0.9rem;
     opacity: 0.7;
+    font-weight: 300;
 }
 
 .content-wrapper {
@@ -169,25 +209,27 @@ footer p {
     align-items: center;
     min-height: 60vh;
     padding: 2rem;
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 
 .subtitle {
     font-size: 2rem;
-    color: var(--cream);
+    color: var(--gold);
     opacity: 0.9;
     margin-bottom: 2rem;
     font-weight: 300;
+    font-family: 'Poppins', sans-serif;
 }
 
 .description {
     font-size: 1.8rem;
-    color: var(--cream);
+    color: var(--soft-white);
     opacity: 0.8;
     max-width: 800px;
     line-height: 1.5;
     font-weight: 300;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Subtle animation for content */
@@ -204,4 +246,9 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Keep other text elements light */
+.description, nav a, .contact-link, footer p {
+    font-weight: 300;
 }
