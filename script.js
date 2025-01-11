@@ -4,16 +4,22 @@ document.querySelectorAll('.nav-button').forEach(button => {
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         
-        // Add a small delay to ensure proper positioning
         setTimeout(() => {
             if (targetId === 'projects') {
+                const projectsOffset = document.getElementById('projects').offsetTop + 50;
                 window.scrollTo({
-                    top: 0,  // Scroll to top for projects section
+                    top: projectsOffset,
+                    behavior: 'smooth'
+                });
+            } else if (targetId === 'resume') {
+                const resumeOffset = document.getElementById('resume').offsetTop + 500;  // Same offset as projects
+                window.scrollTo({
+                    top: resumeOffset,
                     behavior: 'smooth'
                 });
             } else {
                 window.scrollTo({
-                    top: targetSection.offsetTop + window.innerHeight,  // Keep existing behavior for resume
+                    top: targetSection.offsetTop - window.innerHeight/4,
                     behavior: 'smooth'
                 });
             }
