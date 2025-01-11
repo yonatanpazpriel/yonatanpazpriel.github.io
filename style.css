@@ -412,7 +412,7 @@ h1, h2, .description, nav a, .contact-link, footer p {
 
 .project h3 a {
     color: var(--soft-white);
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 4px;
     transition: opacity 0.3s ease;
     font-weight: 300;
@@ -620,4 +620,18 @@ section h2 {
 
 .project:hover .project-description {
     opacity: 1;
+}
+
+.project h2 a {
+    color: var(--soft-white);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.project h2 {
+    color: var(--soft-white);
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-style: normal;  /* Remove italic */
 }
