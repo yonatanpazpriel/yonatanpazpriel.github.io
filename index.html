@@ -10,41 +10,15 @@
 <body>
     <div class="gradient-container"></div>
     
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home">
-            <div class="content-wrapper">
-                <h1>Hello, I'm Yonatan</h1>
-                <div class="description">
-                    I'm a sophomore studying electrical engineering and computer science at UC Berkeley.
-                    <br><br>
-                    I'm passionate about NLP and carnivorous plants!
-                </div>
+    <div class="layout-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <h1>Hello, I'm Yonatan</h1>
+            <div class="description">
+                I'm a sophomore studying electrical engineering and computer science at UC Berkeley.
+                <br><br>
+                I'm passionate about NLP and carnivorous plants!
             </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <!-- Projects content here -->
-        </section>
-
-        <section id="resume">
-            <h2>Resume</h2>
-            <!-- Resume content here -->
-        </section>
-
-        <section id="contact">
-            <h2>Get in Touch with Me</h2>
             <div class="contact-container">
                 <p>
                     <a href="mailto:yonatanpazpriel@berkeley.edu" class="contact-link">
@@ -65,41 +39,22 @@
                     </a>
                 </p>
             </div>
-        </section>
-    </main>
+        </aside>
 
-    <footer>
-        <p>&copy; 2024 Yonatan Paz-Priel</p>
-    </footer>
+        <!-- Right Content Area -->
+        <main class="content">
+            <section id="projects">
+                <h2>Projects</h2>
+                <!-- Projects content here -->
+            </section>
+
+            <section id="resume">
+                <h2>Resume</h2>
+                <!-- Resume content here -->
+            </section>
+        </main>
+    </div>
 
     <script src="gradient.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const section = document.querySelector(this.getAttribute('href'));
-                section.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Update active nav link on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            document.querySelectorAll('section').forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 60) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('nav a').forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href').substring(1) === current) {
-                    a.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
