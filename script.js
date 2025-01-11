@@ -4,13 +4,19 @@ document.querySelectorAll('.nav-button').forEach(button => {
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         
-        // Get the element's position relative to the viewport
-        const elementPosition = targetSection.offsetTop;
-        const offsetPosition = elementPosition - 10;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
+        // Add a small delay to ensure proper positioning
+        setTimeout(() => {
+            if (targetId === 'projects') {
+                window.scrollTo({
+                    top: 0,  // Scroll to top for projects section
+                    behavior: 'smooth'
+                });
+            } else {
+                window.scrollTo({
+                    top: targetSection.offsetTop + window.innerHeight,  // Keep existing behavior for resume
+                    behavior: 'smooth'
+                });
+            }
+        }, 50);
     });
 }); 
