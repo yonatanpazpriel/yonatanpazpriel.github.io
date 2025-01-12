@@ -395,8 +395,8 @@ h1, h2, .description, nav a, .contact-link, footer p {
 .project {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 3rem;  /* Space between projects */
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
 }
 
 .project-info {
@@ -539,14 +539,17 @@ h1, h2, .description, nav a, .contact-link, footer p {
 
 .about-content {
     max-width: 900px;  /* Match project container width */
+    text-align: left;  /* Force left alignment */
 }
 
 .about-content p {
-    color: var(--soft-white) !important;  /* Force white color */
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    text-align: left;
+    color: var(--soft-white);
+    font-size: 0.35rem;  /* Tiny text, from 0.45rem */
+    line-height: 1.1;    /* Minimal line height */
+    margin-bottom: 0.4rem; /* Very small margin */
     font-weight: 300;
+    letter-spacing: 0.1px;  /* Minimal letter spacing */
 }
 
 section h2 {
@@ -591,8 +594,8 @@ section h2 {
 .project {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 3rem;  /* Space between projects */
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
 }
 
 .project h3 {
@@ -603,19 +606,20 @@ section h2 {
 
 .project-video {
     width: 100%;
-    max-width: 250px;
-    border-radius: 8px;
+    max-width: 200px;
+    border-radius: 6px;
     margin: 0;
 }
 
 .project-description {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--soft-white);
     margin: 0;
     font-weight: 300;
     text-align: left;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
+    letter-spacing: 0.3px;
 }
 
 .project:hover .project-description {
@@ -625,8 +629,9 @@ section h2 {
 .project h2 a {
     color: var(--soft-white);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .project h2 {
@@ -634,4 +639,8 @@ section h2 {
     margin-bottom: 1rem;
     font-weight: 300;
     font-style: normal;  /* Remove italic */
+}
+
+#about {
+    text-align: left;  /* Ensure entire section is left-aligned */
 }
