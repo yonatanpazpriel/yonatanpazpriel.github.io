@@ -33,6 +33,7 @@ header {
 
 h1 {
     font-weight: 500;
+    font-style: italic;
     font-size: 4rem;
     color: var(--soft-white);
     margin-bottom: 2rem;
@@ -68,7 +69,7 @@ nav a.active {
 main {
     text-align: center;
     padding: 1rem;
-    min-height: 100vh;  /* Ensure enough scroll space for gradient */
+    min-height: 25vh;  /* Ensure enough scroll space for gradient */
 }
 
 section {
@@ -256,7 +257,7 @@ html {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -303,7 +304,7 @@ main {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
@@ -396,11 +397,8 @@ h1, h2, .description, nav a, .contact-link, footer p {
     opacity: 1;
 }
 
-.project h3 {
-    font-size: 2rem;
-    color: var(--soft-white);
-    margin-bottom: 0.1rem;
-    font-weight: 300;
+.project h1 {
+    font-style: italic;
 }
 
 .project h3 a {
@@ -413,6 +411,7 @@ h1, h2, .description, nav a, .contact-link, footer p {
 }
 
 .project h3 a:hover {
+    text-decoration: underline;
     opacity: 0.8;
 }
 
