@@ -393,6 +393,7 @@ h1, h2, .description, nav a, .contact-link, footer p {
 }
 
 .project {
+    /* Change from 'none' to 'flex' to make it visible */
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -400,7 +401,27 @@ h1, h2, .description, nav a, .contact-link, footer p {
 }
 
 .project-info {
-    flex: 1;
+    /* Remove any container properties */
+    display: none;
+    flex-direction: column;
+}
+
+.project-video {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.project-description {
+    font-size: 0.35rem;
+    color: var(--soft-white);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.project:hover .project-description {
+    opacity: 1;
 }
 
 .project h3 {
@@ -430,7 +451,7 @@ h1, h2, .description, nav a, .contact-link, footer p {
 }
 
 .project {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 2rem;
     background-color: rgba(240, 240, 255, 0.05);
@@ -618,7 +639,7 @@ section h2 {
     font-weight: 300;
     text-align: left;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
     letter-spacing: 0.3px;
 }
 
