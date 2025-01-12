@@ -103,6 +103,15 @@ footer {
     text-align: center;
 }
 
+.profile-pic {
+    width: 80px;  /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%;  /* Makes it circular */
+    object-fit: cover;  /* Ensures image fills the circle nicely */
+    margin: 1rem 0;  /* Adds some space above and below */
+    border: 2px solid rgba(240, 240, 255, 0.1);  /* Optional: adds a subtle border */
+}
+
 .contact-container {
     text-align: left;
     margin-top: 0;
@@ -111,13 +120,12 @@ footer {
 
 .contact-container p {
     font-size: 1.4rem;
-    color: var(--gold);
-    margin: 0.3rem 0;
+    margin: 0.2rem 0;
     background: none;
 }
 
 .contact-link {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     text-decoration: none;
     color: var(--dark-indigo);
     font-weight: 300;
@@ -125,10 +133,10 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin: 3px 0;
-    padding: 4px 12px;
+    margin: 2px 0;
+    padding: 2px 12px;
     border-radius: 25px;
-    background-color: var(--soft-white);
+    background-color: rgba(240, 240, 255, 0.01);  /* Made more transparent */
 }
 
 /* Email link in Gmail red */
@@ -167,11 +175,6 @@ a[href*="github"] i {
 .contact-link i {
     font-size: 0.8rem;
     color: var(--dark-indigo);
-}
-
-/* Remove or comment out the gradient container styles */
-.gradient-container {
-    display: none;  /* This hides the gradient container */
 }
 
 /* Make sure other elements are visible over gradient */
