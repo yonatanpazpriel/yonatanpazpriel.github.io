@@ -281,7 +281,7 @@ main {
 
 .layout-container {
     display: flex;
-    min-height: 100vh;
+    min-height: 10vh;
 }
 
 .sidebar {
@@ -304,7 +304,7 @@ main {
 }
 
 section {
-    min-height: 50vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
