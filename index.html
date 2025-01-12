@@ -96,5 +96,30 @@
 
     <script src="gradient.js"></script>
     <script src="script.js"></script>
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded');
+            
+            const buttons = document.querySelectorAll('.nav-button');
+            console.log('Found nav buttons:', buttons.length);
+            
+            buttons.forEach(button => {
+                console.log('Button href:', button.getAttribute('href'));
+                
+                button.addEventListener('click', (e) => {
+                    console.log('Button clicked:', button.getAttribute('href'));
+                    const targetId = button.getAttribute('href');
+                    window.location.hash = targetId;  // This will update the URL hash
+                    
+                    // Get the target element
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
