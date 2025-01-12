@@ -566,7 +566,7 @@ h1, h2, .description, nav a, .contact-link, footer p {
 .about-content p {
     text-align: left;
     color: var(--soft-white);
-    font-size: 0.35rem;  /* Tiny text, from 0.45rem */
+    font-size: 1.2rem !important; /* Tiny text, from 0.45rem */
     line-height: 1.1;    /* Minimal line height */
     margin-bottom: 0.4rem; /* Very small margin */
     font-weight: 300;
