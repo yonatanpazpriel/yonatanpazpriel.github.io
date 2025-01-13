@@ -109,9 +109,13 @@ footer {
     border-radius: 50%;  /* Makes it circular */
     object-fit: cover;  /* Ensures image fills the circle nicely */
     margin: 1rem 0;  /* Adds some space above and below */
-    align-items: center; 
     gap: 0.8rem;
+}
 
+.profile-pic-container {  /* Add a container div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-container {
@@ -119,6 +123,9 @@ footer {
     text-align: center;
     margin-top: 0;
     background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-container p {
@@ -434,7 +441,7 @@ h1, h2, .description, nav a, .contact-link, footer p {
 .social-links {
     display: flex;
     gap: 1rem;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 
@@ -481,6 +488,8 @@ h1, h2, .description, nav a, .contact-link, footer p {
 
 .contact-container {
     margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .email-container {
