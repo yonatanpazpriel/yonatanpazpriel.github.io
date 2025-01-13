@@ -104,16 +104,19 @@ footer {
 }
 
 .profile-pic {
-    width: 80px;  /* Adjust size as needed */
-    height: 80px;
+    width: 100px;  /* Adjust size as needed */
+    height: 100px;
     border-radius: 50%;  /* Makes it circular */
     object-fit: cover;  /* Ensures image fills the circle nicely */
     margin: 1rem 0;  /* Adds some space above and below */
-    border: 2px solid rgba(240, 240, 255, 0.1);  /* Optional: adds a subtle border */
+    align-items: center; 
+    gap: 0.8rem;
+
 }
 
 .contact-container {
-    text-align: left;
+    align-items: center; 
+    text-align: center;
     margin-top: 0;
     background: none;
 }
@@ -124,20 +127,6 @@ footer {
     background: none;
 }
 
-.contact-link {
-    font-size: 0.5rem;
-    text-decoration: none;
-    color: var(--dark-indigo);
-    font-weight: 300;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin: 2px 0;
-    padding: 2px 12px;
-    border-radius: 25px;
-    background-color: rgba(240, 240, 255, 0.01);  /* Made more transparent */
-}
 
 /* Email link in Gmail red */
 a[href^="mailto"] {
@@ -352,12 +341,7 @@ main {
     text-align: left;
 }
 
-.contact-link {
-    font-size: 0.8rem;
-    padding: 4px 12px;
-    margin: 3px 0;
-    gap: 8px;
-}
+
 
 .contact-link i {
     font-size: 0.8rem;
@@ -453,19 +437,36 @@ h1, h2, .description, nav a, .contact-link, footer p {
     justify-content: flex-start;
 }
 
+
 .contact-link {
-    font-size: 20px;
+    font-size: 10rem;
+    aspect-ratio: 1 / 1;  /* Forces 1:1 aspect ratio */
+    border-radius: 50%;  /* Makes it perfectly circular */
+    width: 50px;        /* Set equal width and height */
+    height: 50px;     
+    text-decoration: none;
     color: var(--soft-white);
-    padding: 6px;
-    border-radius: 8px;
-    background-color: var(--soft-white);
-    color: var(--dark-indigo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 300;
     transition: all 0.3s ease;
+    gap: 8px;
+    margin: 2px 0;
+    padding: 0rem;
+    border-radius: 25px;
+    background-color: rgba(240, 240, 255, 0.01);  /* Made more transparent */
+}
+
+.contact-link {
+      /* Must match width exactly */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    padding: 0rem;         /* Remove any padding that might be making it oval */
+    background-color: rgba(240, 240, 255, 0.4);
 }
 
 .contact-link i {
@@ -505,13 +506,17 @@ h1, h2, .description, nav a, .contact-link, footer p {
 .nav-buttons {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* Align to the left */
+    align-items: center;
+    width: 100%;
     gap: 0.8rem;  /* Reduced gap between buttons */
     margin: 2rem 0;
 }
 
 .nav-button {
     color: var(--soft-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     font-size: 0.9rem;  /* Smaller font */
     font-weight: 300;
